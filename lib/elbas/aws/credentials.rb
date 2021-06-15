@@ -11,8 +11,7 @@ module Elbas
             secret_access_key: fetch(:aws_secret_access_key, ENV['AWS_SECRET_ACCESS_KEY']),
             region:            fetch(:aws_region,            ENV['AWS_REGION'])
           }
-
-          _credentials.merge! region: fetch(:aws_region) if fetch(:aws_region)
+          
           _credentials
         end
       end
